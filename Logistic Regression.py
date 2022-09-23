@@ -111,7 +111,7 @@ def predict(X,final_lamda):
     prediction=np.array(prediction)
     return prediction
 
-def errorrate(predicted_value,truex):
+def errorrate(predicted_value,truex):  #for finding th error rate
     l=[]
     for i in truex:
         a = (truex-predicted_value)^2
@@ -125,7 +125,7 @@ def errorrate(predicted_value,truex):
 #removing impurities
 #creating labels and attributes as given
 
-from sklearn import preprocessing
+from sklearn import preprocessing  #The dataset auto has impurities,so we try to remove them and put them in a data drame
 df = pd.read_csv("auto.csv")
 df.replace('?',np.nan,inplace=True)
 df.dropna(inplace=True)
