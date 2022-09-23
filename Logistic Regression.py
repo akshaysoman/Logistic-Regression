@@ -190,7 +190,7 @@ train = predict(X_train,final_lamda)
 #getting error rates for test and train data
 
 a = errorrate(test,y_test)
-print("test error : " ,a)
+print("test error : " ,a) 
 b = errorrate(train,y_train)
 print("train error : " ,b)
 
